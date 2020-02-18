@@ -1,6 +1,8 @@
+
 module.exports = async function (context, req) {
-    context.log('Generating simplified...');
+    context.log('Generating unique tweets...');
+    let now = new Date();
     context.res = {
-        body: "Tests"
+        body: "The date & time now is: " + now.toISOString() + "T" + now.toTimeString()
     };
 };
